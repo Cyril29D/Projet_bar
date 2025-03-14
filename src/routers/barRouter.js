@@ -4,14 +4,14 @@ const validator = require("../middleware/formRequest/barFormRequest")
 const { index, show, update, destroy, store} = require("../controllers/barController")
 
 
-Router.get("/bars", index)
+Router.get("/api/bars", index)
 
-Router.get("/bars/:id", show)
+Router.get("/api/bars/:id", show)
 
-Router.post("/bars", store)
+Router.post("/api/bars", store)
 
-Router.put("/bars/:id", update)
+Router.put("/api/bars/:id", update)
 
-Router.delete("/bars/:id", destroy);
+Router.delete("/api/bars/:id", destroy);
 
 module.exports = Router;
