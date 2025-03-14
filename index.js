@@ -8,7 +8,8 @@ const app = express()
 const PORT = process.env.SERVER_PORT || 3000
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extends: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.use(require("./src/routers/biereRouter"))
 app.use(require("./src/routers/barRouter"))
 app.use(require("./src/routers/commandeRouter"))

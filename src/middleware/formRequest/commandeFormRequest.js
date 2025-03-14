@@ -9,7 +9,7 @@ const validateCommande = [
 
   body("prix")
     .notEmpty().withMessage("Le prix doit être saisie ")
-    .isFloat({ gt: 0 }).withMessage("Le prix doit être un nombre")
+    .isString({ gt: 0 }).withMessage("Le prix doit être un nombre")
     .trim(),
 
     body("date")
@@ -24,7 +24,7 @@ const validateCommande = [
     .withMessage("Le statut doit être 'brouillon', 'en cours' ou 'terminée'"),
 
   (req, res, next) => {
-    const errors = validatioResult(req)
+    const errors = validationResult(req)
     if (errors) return res.status(400).json({ errors });
 
     next()

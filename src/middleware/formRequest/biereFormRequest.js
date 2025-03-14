@@ -13,7 +13,7 @@ const validateBiere = [
 
   body("prix")
     .notEmpty().withMessage("Le prix doit être saisie ")
-    .isFloat({ gt: 0 }).withMessage("Le prix doit être un nombre")
+    .isString({ gt: 0 }).withMessage("Le prix doit être un nombre")
     .trim(),
 
     body("degree")
